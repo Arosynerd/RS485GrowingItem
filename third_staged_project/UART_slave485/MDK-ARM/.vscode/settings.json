@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "string": "c",
+        "gpio.h": "c",
+        "dth11.h": "c",
+        "adc.h": "c",
+        "main.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "stm32f1xx_hal_conf.h": "c",
+        "dma.h": "c"
+    }
+}

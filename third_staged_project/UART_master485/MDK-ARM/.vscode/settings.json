@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "string": "c",
+        "usart.h": "c",
+        "main.h": "c",
+        "string.h": "c",
+        "stm32f1xx_hal.h": "c",
+        "stm32f1xx_hal_conf.h": "c",
+        "gpio.h": "c",
+        "spi.h": "c",
+        "esp8266.h": "c"
+    }
+}
