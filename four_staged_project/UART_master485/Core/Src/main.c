@@ -211,7 +211,8 @@ int main(void)
   printf("%s\r\n", datastr);
   // 3. 段擦除
 
-  W25Q32_EraseSector(0, 0);
+  //W25Q32_EraseSector(0, 0);
+  W25Q32_EraseChip();//一次擦除整一片
   //  for (uint8_t i = 0; i < 10; i++)
   //  {
   //    add_data((uint8_t *)datastr);
@@ -320,20 +321,7 @@ int main(void)
   // test end
   /* USER CODE BEGIN WHILE */
   while (1)
-  { /*频闪，接收到信息立即返回
-      HAL_UARTEx_ReceiveToIdle_IT(&huart1, buf, 1000);
-     if (begin)
-     {
-       // HAL_UART_Transmit(&huart2, buf, len, 1000);
-       HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-       printf("%s\r\n", buf);
-       begin = 0;
-     }
-     // HAL_UART_Transmit(&huart1, "1", 1, 1000);
-     HAL_Delay(500);
-     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);*/
-    /* USER CODE BEGIN 3 */
-
+  { 
     // 发送从机1
     HAL_UART_Transmit(&huart1, "2", 1, 1000);
     TXRT_Swap(); // 切换为接收
@@ -365,7 +353,7 @@ int main(void)
     // 关闭定时器
     HAL_TIM_Base_Stop_IT(&htim2);
     TXRT_Swap(); // 切换为发送
-    HAL_Delay(200);
+    HAL_Delay(1000);
     // 发送从机2
     HAL_UART_Transmit(&huart1, "1", 1, 1000);
     HAL_TIM_Base_Start_IT(&htim2);

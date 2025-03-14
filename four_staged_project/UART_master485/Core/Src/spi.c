@@ -165,6 +165,14 @@ void W25Q32_WaitNotBusy(void)
 
   SPI1_CS_HIGH();
 }
+void W25Q32_EraseChip(void){
+  W25Q32_WaitNotBusy();
+  W25Q32_WriteEnable();
+  SPI1_CS_LOW();
+  SPI_SwapByte(0xC7);
+  SPI1_CS_HIGH();
+  W25Q32_WriteDisable();
+}
 
 // 擦除段（sector erase）,地址只需要块号和段号
 void W25Q32_EraseSector(uint8_t block, uint8_t sector)

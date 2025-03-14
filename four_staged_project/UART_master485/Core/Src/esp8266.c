@@ -118,7 +118,7 @@ void esp8266_Reconnect(void)
                     }
                     //复位
                     //擦除存储器
-                    W25Q32_EraseSector(0, 0);
+                    W25Q32_EraseChip();
                     written_pointer = 0;
 
                 }

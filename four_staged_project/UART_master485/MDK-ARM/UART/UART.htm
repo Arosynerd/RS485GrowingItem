@@ -3,7 +3,7 @@
 <title>Static Call Graph - [UART\UART.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image UART\UART.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Mar 14 14:12:41 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Fri Mar 14 17:24:59 2025
 <BR><P>
 <H3>Maximum Stack Usage =        344 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -478,7 +478,7 @@ Global Symbols
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;esp8266_reset
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reset_pin_init
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readID
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseSector
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseChip
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_GPIO_Init
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TXRT_Swap
 </UL>
@@ -997,7 +997,7 @@ Global Symbols
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_PageWrite
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_Read
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readID
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseSector
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseChip
 </UL>
 
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f1xx_it.o(i.SVC_Handler))
@@ -1085,8 +1085,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xb.o(RESET)
 </UL>
-<P><STRONG><a name="[ab]"></a>W25Q32_EraseSector</STRONG> (Thumb, 78 bytes, Stack size 16 bytes, spi.o(i.W25Q32_EraseSector))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = W25Q32_EraseSector &rArr; W25Q32_WriteEnable &rArr; SPI_SwapByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
+<P><STRONG><a name="[ab]"></a>W25Q32_EraseChip</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, spi.o(i.W25Q32_EraseChip))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = W25Q32_EraseChip &rArr; W25Q32_WriteEnable &rArr; SPI_SwapByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_WriteEnable
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_WriteDisable
@@ -1128,7 +1128,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_PageWrite
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_Read
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseSector
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseChip
 </UL>
 
 <P><STRONG><a name="[ae]"></a>W25Q32_WriteDisable</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, spi.o(i.W25Q32_WriteDisable))
@@ -1138,7 +1138,7 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_PageWrite
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseSector
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseChip
 </UL>
 
 <P><STRONG><a name="[ad]"></a>W25Q32_WriteEnable</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, spi.o(i.W25Q32_WriteEnable))
@@ -1148,7 +1148,7 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_PageWrite
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseSector
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseChip
 </UL>
 
 <P><STRONG><a name="[b1]"></a>__0printf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
@@ -1198,7 +1198,7 @@ Global Symbols
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_data
 </UL>
 
-<P><STRONG><a name="[bb]"></a>esp8266_Reconnect</STRONG> (Thumb, 228 bytes, Stack size 112 bytes, esp8266.o(i.esp8266_Reconnect))
+<P><STRONG><a name="[bb]"></a>esp8266_Reconnect</STRONG> (Thumb, 224 bytes, Stack size 112 bytes, esp8266.o(i.esp8266_Reconnect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = esp8266_Reconnect &rArr; W25Q32_Read &rArr; W25Q32_WaitNotBusy &rArr; SPI_SwapByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;convert_address_to_w25q32
@@ -1206,7 +1206,7 @@ Global Symbols
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;esp8266_reset
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;espPrintf
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;esp8266_init
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseSector
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseChip
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -1272,7 +1272,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
-<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 648 bytes, Stack size 64 bytes, main.o(i.main))
+<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 658 bytes, Stack size 64 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = main &rArr; esp8266_Reconnect &rArr; W25Q32_Read &rArr; W25Q32_WaitNotBusy &rArr; SPI_SwapByte &rArr; HAL_SPI_TransmitReceive &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readID
@@ -1281,7 +1281,7 @@ Global Symbols
 <LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;esp8266_checkonline
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;esp8266_Reconnect
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_data
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseSector
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;W25Q32_EraseChip
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_settime
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART2_UART_Init
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_USART1_UART_Init

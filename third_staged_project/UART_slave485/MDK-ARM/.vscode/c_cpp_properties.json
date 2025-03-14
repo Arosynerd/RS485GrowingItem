@@ -3,18 +3,18 @@
         {
             "name": "UART",
             "includePath": [
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\Core\\Inc",
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\Drivers\\CMSIS\\Include",
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\Core\\Inc",
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\Drivers\\STM32F1xx_HAL_Driver\\Inc",
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\Drivers\\STM32F1xx_HAL_Driver\\Inc\\Legacy",
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\Drivers\\CMSIS\\Device\\ST\\STM32F1xx\\Include",
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\Drivers\\CMSIS\\Include",
                 "D:\\KeilSTM32\\ARM\\ARMCC\\include",
                 "D:\\KeilSTM32\\ARM\\ARMCC\\include\\arm_linux",
                 "D:\\KeilSTM32\\ARM\\ARMCC\\include\\arm_linux_compat",
                 "D:\\KeilSTM32\\ARM\\ARMCC\\include\\rw",
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\MDK-ARM",
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\Core\\Src",
-                "f:\\Users\\17444\\Desktop\\CODE\\gitcode\\RS485GrowingItem\\first_project\\UART_slave485\\Drivers\\STM32F1xx_HAL_Driver\\Src"
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\MDK-ARM",
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\Core\\Src",
+                "f:\\Users\\17444\\Desktop\\gitcode\\RS485GrowingItem\\third_staged_project\\UART_slave485\\Drivers\\STM32F1xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

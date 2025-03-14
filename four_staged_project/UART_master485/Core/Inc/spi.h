@@ -55,6 +55,8 @@ void W25Q32_WaitNotBusy(void);
 
 // 擦除段（sector erase）,地址只需要块号和段号
 void W25Q32_EraseSector(uint8_t block, uint8_t sector);
+//擦除整片芯片
+void W25Q32_EraseChip(void);
 
 // 写入（页写）
 void W25Q32_PageWrite(uint8_t block, uint8_t sector, uint8_t page,uint8_t innerAddr, uint8_t * data, uint16_t len);
