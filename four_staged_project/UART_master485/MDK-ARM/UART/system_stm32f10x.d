@@ -1,0 +1,9 @@
+uart\system_stm32f10x.o: ..\Core\Src\system_stm32f10x.c
+uart\system_stm32f10x.o: C:\Users\17444\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h
+uart\system_stm32f10x.o: .\RTE\_UART\RTE_Components.h
+uart\system_stm32f10x.o: ../Drivers/CMSIS/Include/core_cm3.h
+uart\system_stm32f10x.o: D:\KeilSTM32\ARM\ARMCC\Bin\..\include\stdint.h
+uart\system_stm32f10x.o: ../Drivers/CMSIS/Include/cmsis_version.h
+uart\system_stm32f10x.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
+uart\system_stm32f10x.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+uart\system_stm32f10x.o: C:\Users\17444\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h

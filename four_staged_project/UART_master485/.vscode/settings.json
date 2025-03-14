@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "esp8266.h": "c",
+        "usart.h": "c"
+    }
+}
