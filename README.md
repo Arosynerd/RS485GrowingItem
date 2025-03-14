@@ -1,5 +1,13 @@
 # RS485GrowingItem
 
+## 大概介绍
+
+主机发送从机，每隔一段时间询问从机温湿度及光照，从机应答。主机再发送数据到tcpserver
+
+tcpserver保存数据到数据库。若没有连接到tcpserver，暂时保存在主机的外部存储器，连接后再发送给tcpserver。
+
+主机从机都有一个频闪指示灯代表正常运行。
+
 ## first_project
 
 最开始的，较为简单
