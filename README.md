@@ -46,7 +46,13 @@
 
 3.修复从机返回数据不稳定的问题
 
+#### add
+
+增加了server端对USB连接的支持，使用USB连接，就不需要网络环境的保证了。
+
 ### Function unrealized
 
 qt端对stm32的控制配置
+
+单片机端usb端口的开发
 
